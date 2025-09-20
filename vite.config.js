@@ -16,31 +16,64 @@ export default defineConfig({
   plugins: [
     handlebars({
       partialDirectory: './partials',
-      context: {
-        // Campaign Information
-        candidateName: 'Anthony Colucci',
-        office: 'Toms River Ward 1 Council',
-        slogan: 'Leadership You Can Trust',
-        electionDate: 'November 5, 2025',
-        
-        // Site Information
-        title: 'Anthony Colucci for Ward 1 Councilman',
-        description: 'Experienced leadership, community-focused solutions for Ward 1',
-        author: 'Colucci Campaign Team',
-        year: new Date().getFullYear(),
-        version: '1.0.0',
-        environment: 'development',
-        
-        // Campaign Details
-        experience: '15+ years of community service',
-        priorities: ['Public Safety', 'Economic Development', 'Infrastructure', 'Community Engagement'],
-        campaignEmail: 'info@colucciforward1.com',
-        campaignPhone: '(555) 123-WARD',
-        
-        // Social Media
-        facebook: 'ColucciForWard1',
-        twitter: '@ColucciWard1',
-        instagram: 'colucciforward1'
+      context: (pagePath) => {
+        // Base context for all pages
+        const baseContext = {
+          // Campaign Information
+          candidateName: 'Anthony Colucci',
+          office: 'Toms River Ward 1 Council',
+          slogan: 'Leadership You Can Trust',
+          electionDate: 'November 5, 2025',
+          
+          // Site Information
+          title: 'Anthony Colucci for Ward 1 Councilman',
+          description: 'Experienced leadership and community-focused solutions for Toms River Ward 1. Vote Anthony Colucci for Council - Leadership You Can Trust.',
+          author: 'Colucci Campaign Team',
+          year: new Date().getFullYear(),
+          version: '1.0.0',
+          environment: 'development',
+          
+          // SEO Variables
+          siteUrl: 'https://jonssmall.github.io/campaign/',
+          canonical_path: '',
+          
+          // Campaign Details
+          experience: '15+ years of community service',
+          priorities: ['Public Safety', 'Economic Development', 'Infrastructure', 'Community Engagement'],
+          campaignEmail: 'info@colucciforward1.com',
+          campaignPhone: '(555) 123-WARD',
+          
+          // Social Media
+          facebook: 'ColucciForWard1',
+          twitter: '@ColucciWard1',
+          instagram: 'colucciforward1'
+        };
+
+        if (pagePath.includes('issues/index.html')) {
+          return {
+            ...baseContext,
+            title: 'Issues & Platform - Anthony Colucci for Ward 1',
+            description: 'Anthony Colucci\'s platform for Ward 1: Public Safety, Economic Development, Infrastructure, and Community Engagement. Real solutions for Toms River.',
+            canonical_path: 'issues/'
+          };
+        }
+
+        if (pagePath.includes('endorsements/index.html')) {
+          return {
+            ...baseContext,
+            title: 'Endorsements - Anthony Colucci for Ward 1',
+            description: 'Community leaders and organizations endorsing Anthony Colucci for Toms River Ward 1 Council. Trusted leadership you can count on.',
+            canonical_path: 'endorsements/'
+          };
+        }
+
+        // Default context for homepage
+        return {
+          ...baseContext,
+          title: 'Anthony Colucci for Toms River Ward 1 Council - Leadership You Can Trust',
+          description: 'Vote Anthony Colucci for Toms River Ward 1 Council. Experienced leadership, proven results. Election Day: November 5, 2025.',
+          canonical_path: ''
+        };
       },
       helpers: handlebarsHelpers
     }),
