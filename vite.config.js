@@ -13,6 +13,7 @@ const handlebarsHelpers = {
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/campaign/',
+  assetsInclude: ['**/*.xml', '**/*.txt'],
   plugins: [
     handlebars({
       partialDirectory: './partials',

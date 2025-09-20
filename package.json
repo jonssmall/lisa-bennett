@@ -6,8 +6,9 @@
   "homepage": "https://jonssmall.github.io/campaign/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "node generate-seo-files.js && vite build",
+    "preview": "vite preview",
+    "generate-seo": "node generate-seo-files.js"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
