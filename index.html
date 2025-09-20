@@ -46,22 +46,22 @@
             
             <!-- Primary Call-to-Action Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12">
-              <a href="/donate/" class="group bg-red-600 hover:bg-red-700 text-white font-bold py-5 px-10 rounded-lg text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 min-w-[220px] flex items-center justify-center">
-                <svg class="w-6 h-6 mr-3 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <a href="https://politics.raisethemoney.com/en/acolucci/" class="group bg-red-600 hover:bg-red-700 text-white font-bold py-5 px-10 rounded-lg text-xl shadow-2xl transition-colors duration-300 min-w-[220px] flex items-center justify-center">
+                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                 </svg>
                 Donate Now
               </a>
               
-              <a href="/volunteer/" class="group bg-blue-700 hover:bg-blue-800 text-white font-bold py-5 px-10 rounded-lg text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 min-w-[220px] flex items-center justify-center">
-                <svg class="w-6 h-6 mr-3 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <a href="/volunteer/" class="group bg-blue-700 hover:bg-blue-800 text-white font-bold py-5 px-10 rounded-lg text-xl shadow-2xl transition-colors duration-300 min-w-[220px] flex items-center justify-center">
+                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                 </svg>
                 Get Involved
               </a>
               
-              <a href="https://www.vote.gov/" target="_blank" rel="noopener noreferrer" class="group bg-green-600 hover:bg-green-700 text-white font-bold py-5 px-10 rounded-lg text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 min-w-[220px] flex items-center justify-center">
-                <svg class="w-6 h-6 mr-3 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <a href="https://voter.svrs.nj.gov/register" target="_blank" rel="noopener noreferrer" class="group bg-green-600 hover:bg-green-700 text-white font-bold py-5 px-10 rounded-lg text-xl shadow-2xl transition-colors duration-300 min-w-[220px] flex items-center justify-center">
+                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                 </svg>
                 Register to Vote
@@ -70,9 +70,9 @@
             
             <!-- Secondary Actions -->
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <a href="/about/" class="text-white hover:text-yellow-300 font-semibold text-lg underline decoration-2 underline-offset-4 transition-colors">
+              <button id="learn-about-button" class="text-white hover:text-yellow-300 font-semibold text-lg underline decoration-2 underline-offset-4 transition-colors bg-transparent border-none cursor-pointer">
                 Learn About Anthony →
-              </a>
+              </button>
               <span class="text-gray-300 hidden sm:inline">•</span>
               <a href="/issues/" class="text-white hover:text-yellow-300 font-semibold text-lg underline decoration-2 underline-offset-4 transition-colors">
                 View Platform →
@@ -85,7 +85,7 @@
 
     <!-- Campaign Platform Section -->
     <main>
-      <section class="py-12 sm:py-16 lg:py-20 bg-gray-50">
+      <section id="platform-section" class="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div class="max-w-6xl mx-auto">
             <!-- Section Header -->
@@ -157,17 +157,17 @@
               </p>
               
               <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-6">
-                <a href="/volunteer/" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl min-h-[56px] flex items-center justify-center w-full sm:w-auto">
-                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                  </svg>
-                  Volunteer Today
-                </a>
                 <a href="/donate/" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl min-h-[56px] flex items-center justify-center w-full sm:w-auto">
                   <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                   </svg>
                   Donate Now
+                </a>
+                <a href="/volunteer/" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl min-h-[56px] flex items-center justify-center w-full sm:w-auto">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                  </svg>
+                  Volunteer Today
                 </a>
               </div>
 

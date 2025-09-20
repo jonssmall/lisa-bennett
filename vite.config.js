@@ -17,7 +17,7 @@ export default defineConfig({
       context: {
         // Campaign Information
         candidateName: 'Anthony Colucci',
-        office: 'Ward 1 Councilman',
+        office: 'Toms River Ward 1 Council',
         slogan: 'Leadership You Can Trust',
         electionDate: 'November 5, 2025',
         

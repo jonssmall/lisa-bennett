@@ -1,41 +1,6 @@
 import './style.css'
 
-// Header scroll animation functionality
-const headerBackground = document.querySelector('#header-bg')
-const scrollThreshold = 50 // Pixels to scroll before animation triggers
-
-if (headerBackground) {
-  const updateHeaderBackground = () => {
-    const scrollY = window.scrollY
-    
-    if (scrollY > scrollThreshold) {
-      // Scrolled down - apply darker background
-      headerBackground.className = 'bg-gradient-to-b from-gray-900/95 via-gray-800/90 to-gray-900/85 backdrop-blur-lg shadow-xl border-b border-gray-700/30 transition-all duration-500 ease-in-out'
-    } else {
-      // At top - transparent background to show hero image
-      headerBackground.className = 'bg-gradient-to-b from-black/70 via-black/50 to-transparent backdrop-blur-sm transition-all duration-500 ease-in-out'
-    }
-  }
-
-  // Listen for scroll events with throttling for performance
-  let ticking = false
-  const handleScroll = () => {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        updateHeaderBackground()
-        ticking = false
-      })
-      ticking = true
-    }
-  }
-
-  window.addEventListener('scroll', handleScroll)
-  
-  // Initial check in case page loads scrolled
-  updateHeaderBackground()
-}
-
-// Mobile menu toggle functionality
+// Mobile menu functionality
 const mobileMenuButton = document.querySelector('#mobile-menu-button')
 const mobileMenu = document.querySelector('#mobile-menu')
 
@@ -53,39 +18,171 @@ if (mobileMenuButton && mobileMenu) {
   })
 }
 
-// Demo button functionality
-const demoButton = document.querySelector('#demo-button')
-if (demoButton) {
-  demoButton.addEventListener('click', () => {
-    // Smooth scroll to demo section
-    const demoSection = document.querySelector('#counter').closest('section')
-    if (demoSection) {
-      demoSection.scrollIntoView({ 
+// Desktop header scroll animation (mobile header is always solid blue)
+const desktopHeaderBg = document.querySelector('#desktop-header-bg')
+const scrollThreshold = 50
+
+if (desktopHeaderBg) {
+  const updateDesktopHeader = () => {
+    const scrollY = window.scrollY
+    
+    if (scrollY > scrollThreshold) {
+      // Scrolled down - apply darker background with more opacity
+      desktopHeaderBg.className = 'bg-gradient-to-b from-black/90 via-black/80 to-black/60 backdrop-blur-md transition-all duration-500 ease-in-out shadow-lg'
+    } else {
+      // At top - transparent background to show hero image
+      desktopHeaderBg.className = 'bg-gradient-to-b from-black/70 via-black/50 to-transparent backdrop-blur-sm transition-all duration-500 ease-in-out'
+    }
+  }
+
+  // Listen for scroll events with throttling for performance
+  let ticking = false
+  const handleScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateDesktopHeader()
+        ticking = false
+      })
+      ticking = true
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll)
+  
+  // Initial check in case page loads scrolled
+  updateDesktopHeader()
+}
+
+// Learn About Anthony smooth scroll functionality
+const learnAboutButton = document.querySelector('#learn-about-button')
+if (learnAboutButton) {
+  learnAboutButton.addEventListener('click', () => {
+    const platformSection = document.querySelector('#platform-section')
+    if (platformSection) {
+      platformSection.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'
       })
     }
-    
-    // Optional: Show a confirmation message
-    const originalText = demoButton.textContent
-    demoButton.textContent = 'Demo Requested! ✓'
-    demoButton.classList.remove('hover:bg-yellow-300')
-    demoButton.classList.add('bg-green-500', 'hover:bg-green-600')
-    
-    setTimeout(() => {
-      demoButton.textContent = originalText
-      demoButton.classList.remove('bg-green-500', 'hover:bg-green-600')
-      demoButton.classList.add('hover:bg-yellow-300')
-    }, 2000)
   })
 }
 
-// Counter functionality
-const counterButton = document.querySelector('#counter')
-if (counterButton) {
-  let counter = 0
-  counterButton.addEventListener('click', () => {
-    counter++
-    counterButton.textContent = `Count is ${counter}`
+// Header "About Anthony" buttons smooth scroll functionality
+const desktopAboutButton = document.querySelector('#desktop-about-button')
+const mobileAboutButton = document.querySelector('#mobile-about-button')
+
+function handleAboutAnthonyClick() {
+  const platformSection = document.querySelector('#platform-section')
+  
+  // Check if we're on the home page and the platform section exists
+  if (platformSection) {
+    // We're on the home page - smooth scroll to the section
+    platformSection.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    })
+  } else {
+    // We're on a different page - navigate to home page with anchor fragment
+    window.location.href = '/#platform-section'
+  }
+}
+
+if (desktopAboutButton) {
+  desktopAboutButton.addEventListener('click', handleAboutAnthonyClick)
+}
+
+if (mobileAboutButton) {
+  mobileAboutButton.addEventListener('click', () => {
+    // Close mobile menu first
+    const mobileMenu = document.querySelector('#mobile-menu')
+    if (mobileMenu) {
+      mobileMenu.classList.add('hidden')
+    }
+    
+    // Then handle the navigation/scrolling
+    handleAboutAnthonyClick()
+  })
+}
+
+// Handle anchor fragment navigation when page loads
+document.addEventListener('DOMContentLoaded', () => {
+  // Check if there's a hash in the URL when the page loads
+  if (window.location.hash === '#platform-section') {
+    const platformSection = document.querySelector('#platform-section')
+    if (platformSection) {
+      // Small delay to ensure page is fully rendered
+      setTimeout(() => {
+        platformSection.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }, 100)
+    }
+  }
+})
+
+// Newsletter signup form functionality
+const newsletterForm = document.querySelector('#newsletter-signup')
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    
+    const emailInput = document.querySelector('#email')
+    const zipcodeInput = document.querySelector('#zipcode')
+    const submitButton = newsletterForm.querySelector('button[type="submit"]')
+    
+    // Basic validation
+    const email = emailInput.value.trim()
+    const zipcode = zipcodeInput.value.trim()
+    
+    if (!email || !zipcode) {
+      alert('Please fill in both email and zip code.')
+      return
+    }
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.')
+      emailInput.focus()
+      return
+    }
+    
+    // Zip code validation (5 digits)
+    const zipRegex = /^\d{5}$/
+    if (!zipRegex.test(zipcode)) {
+      alert('Please enter a valid 5-digit zip code.')
+      zipcodeInput.focus()
+      return
+    }
+    
+    // Show loading state
+    const originalText = submitButton.textContent
+    submitButton.textContent = 'Signing Up...'
+    submitButton.disabled = true
+    submitButton.classList.add('opacity-75', 'cursor-not-allowed')
+    
+    // Simulate form submission (replace with actual API call)
+    setTimeout(() => {
+      // Success feedback
+      submitButton.textContent = 'Success! ✓'
+      submitButton.classList.remove('bg-blue-600', 'hover:bg-blue-500')
+      submitButton.classList.add('bg-green-600', 'hover:bg-green-500')
+      
+      // Reset form
+      emailInput.value = ''
+      zipcodeInput.value = ''
+      
+      // Show success message
+      alert(`Thank you! We've added ${email} to our mailing list.`)
+      
+      // Reset button after delay
+      setTimeout(() => {
+        submitButton.textContent = originalText
+        submitButton.disabled = false
+        submitButton.classList.remove('opacity-75', 'cursor-not-allowed', 'bg-green-600', 'hover:bg-green-500')
+        submitButton.classList.add('bg-blue-600', 'hover:bg-blue-500')
+      }, 2000)
+    }, 1500)
   })
 }
