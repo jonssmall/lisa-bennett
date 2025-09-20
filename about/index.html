@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+    <title>About Us - {{title}}</title>
+  </head>
+  <body>
+    {{> header}}
+    
+    <!-- Main content -->
+    <main>
+      <!-- About Hero Section -->
+      <section class="bg-gradient-to-br from-purple-500 to-blue-600 py-12 sm:py-16 lg:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center text-white">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+              About {{author}}
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl text-purple-100 max-w-3xl mx-auto">
+              {{description}}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-4xl mx-auto">
+            <div class="prose prose-lg mx-auto">
+              <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Founded in {{year}}, we've been at the forefront of modern web development, 
+                combining cutting-edge technologies like Vite, TailwindCSS, and Handlebars 
+                to create exceptional web experiences.
+              </p>
+              
+              <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Our Mission</h2>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                To empower developers and businesses with fast, scalable, and maintainable 
+                web solutions that leverage the latest in modern web development practices.
+              </p>
+
+              <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2">
+                  Technology Stack Demo
+                </h3>
+                <p class="text-blue-700">
+                  This page demonstrates Handlebars templating with variables like 
+                  <code class="bg-blue-100 px-2 py-1 rounded">{{title}}</code>, 
+                  <code class="bg-blue-100 px-2 py-1 rounded">{{author}}</code>, 
+                  and <code class="bg-blue-100 px-2 py-1 rounded">{{year}}</code> 
+                  being dynamically rendered from the Vite configuration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{> footer}}
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

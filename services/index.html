@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+    <title>Our Services - {{title}}</title>
+  </head>
+  <body>
+    {{> header}}
+    
+    <!-- Main content -->
+    <main>
+      <!-- Services Hero Section -->
+      <section class="bg-gradient-to-br from-green-500 to-blue-600 py-12 sm:py-16 lg:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center text-white">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+              Our Services
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl text-green-100 max-w-3xl mx-auto">
+              Professional web development services using {{uppercase "modern technologies"}}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Grid -->
+      <section class="py-12 sm:py-16 lg:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            
+            <!-- Service 1 -->
+            <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Web Development</h3>
+              <p class="text-gray-600 mb-4">Custom websites built with Vite, TailwindCSS, and modern JavaScript frameworks.</p>
+              <ul class="text-sm text-gray-500 space-y-1">
+                <li>• Responsive Design</li>
+                <li>• Performance Optimization</li>
+                <li>• SEO Ready</li>
+              </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">UI/UX Design</h3>
+              <p class="text-gray-600 mb-4">Beautiful, user-centered designs that convert visitors into customers.</p>
+              <ul class="text-sm text-gray-500 space-y-1">
+                <li>• Mobile-First Design</li>
+                <li>• User Research</li>
+                <li>• Prototyping</li>
+              </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+              <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Performance Optimization</h3>
+              <p class="text-gray-600 mb-4">Lightning-fast websites that load in milliseconds, not seconds.</p>
+              <ul class="text-sm text-gray-500 space-y-1">
+                <li>• Core Web Vitals</li>
+                <li>• Image Optimization</li>
+                <li>• CDN Setup</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {{#if (eq environment "development")}}
+      <section class="py-8 bg-yellow-50 border-t border-yellow-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <p class="text-yellow-800">
+              🛠️ This is the <strong>Services</strong> page - Built by {{author}} using {{title}}
+            </p>
+          </div>
+        </div>
+      </section>
+      {{/if}}
+
+    </main>
+
+    {{> footer}}
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
