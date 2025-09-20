@@ -1,8 +1,9 @@
 {
-  "name": "vite-tailwindcss-project",
-  "private": true,
+  "name": "campaign",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://jonssmall.github.io/campaign/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
