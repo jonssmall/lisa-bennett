@@ -59,6 +59,7 @@ if (learnAboutButton) {
   learnAboutButton.addEventListener('click', () => {
     const platformSection = document.querySelector('#platform-section')
     if (platformSection) {
+      // CSS scroll-margin-top handles the header offset automatically
       platformSection.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'
@@ -78,6 +79,7 @@ function handleAboutAnthonyClick() {
   // Check if we're on the home page and the platform section exists
   if (platformSection) {
     // We're on the home page - smooth scroll to the section
+    // CSS scroll-margin-top handles the header offset automatically
     platformSection.scrollIntoView({ 
       behavior: 'smooth',
       block: 'start'
@@ -118,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (platformSection) {
       // Small delay to ensure page is fully rendered
       setTimeout(() => {
+        // CSS scroll-margin-top handles the header offset automatically
         platformSection.scrollIntoView({ 
           behavior: 'smooth',
           block: 'start'
