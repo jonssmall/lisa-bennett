@@ -84,8 +84,8 @@ function handleAboutAnthonyClick() {
     })
   } else {
     // We're on a different page - navigate to home page with anchor fragment
-    // Use relative path that works with Vite base configuration
-    window.location.href = '../#platform-section'
+    // Use Vite's BASE_URL to ensure correct path regardless of deployment depth
+    window.location.href = `${import.meta.env.BASE_URL}#platform-section`
   }
 }
 
