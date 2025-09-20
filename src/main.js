@@ -70,6 +70,7 @@ if (learnAboutButton) {
 // Header "About Anthony" buttons smooth scroll functionality
 const desktopAboutButton = document.querySelector('#desktop-about-button')
 const mobileAboutButton = document.querySelector('#mobile-about-button')
+const footerAboutButton = document.querySelector('#footer-about-button')
 
 function handleAboutAnthonyClick() {
   const platformSection = document.querySelector('#platform-section')
@@ -102,6 +103,10 @@ if (mobileAboutButton) {
     // Then handle the navigation/scrolling
     handleAboutAnthonyClick()
   })
+}
+
+if (footerAboutButton) {
+  footerAboutButton.addEventListener('click', handleAboutAnthonyClick)
 }
 
 // Handle anchor fragment navigation when page loads
