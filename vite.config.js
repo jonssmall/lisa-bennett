@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import handlebars from 'vite-plugin-handlebars'
+import { resolve } from 'path'
 
 // Custom Handlebars helpers
 const handlebarsHelpers = {
@@ -51,6 +52,13 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true
+    sourcemap: true,
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        endorsements: resolve(__dirname, 'endorsements/index.html'),
+        issues: resolve(__dirname, 'issues/index.html'),
+      }
+    }
   }
 })
