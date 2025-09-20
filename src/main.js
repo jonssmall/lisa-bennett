@@ -84,7 +84,8 @@ function handleAboutAnthonyClick() {
     })
   } else {
     // We're on a different page - navigate to home page with anchor fragment
-    window.location.href = '/#platform-section'
+    // Use relative path that works with Vite base configuration
+    window.location.href = '../#platform-section'
   }
 }
 
