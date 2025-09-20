@@ -5,33 +5,25 @@
     <title>{{title}}</title>
   </head>
   <body>
-    <!-- Hero Section with shared background for header and main content -->
-    <section class="relative min-h-screen overflow-hidden">
-      <!-- Background Image - shared by header and hero content -->
-      <div class="absolute inset-0 z-0">
-        <!-- <img 
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
-          alt="Professional politician at podium" 
-          class="w-full h-full object-cover"
-        /> -->
+    <!-- Sticky Header - positioned outside for proper sticky behavior -->
+    {{> header}}
 
+    <!-- Hero Section with background that extends behind header -->
+    <section class="relative min-h-screen overflow-hidden -mt-20">
+      <!-- Background Image - extends upward to show behind header -->
+      <div class="absolute inset-0 z-0 -top-20 h-[calc(100%+5rem)]">
         <img 
           src="https://www.shutterstock.com/shutterstock/photos/1873857973/display_1500/stock-photo-waist-up-portrait-of-confident-african-american-politician-looking-at-camera-while-standing-with-1873857973.jpg" 
           alt="Professional politician at podium" 
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover object-[center_20%]"
         />
-
-        
         <!-- Dark overlay for text readability -->
         <div class="absolute inset-0 bg-gradient-to-r from-gray-800/85 via-gray-800/75 to-gray-700/70"></div>
       </div>
 
-      <!-- Header with transparent background over shared image -->
-      {{> header}}
-
       <!-- Hero Content -->
-      <main class="relative z-10 flex items-center justify-center min-h-screen">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16">
+      <main class="relative z-10 flex items-center justify-center min-h-screen pt-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div class="max-w-4xl mx-auto"> 
             
             <!-- Main Heading -->

@@ -1,5 +1,40 @@
 import './style.css'
 
+// Header scroll animation functionality
+const headerBackground = document.querySelector('#header-bg')
+const scrollThreshold = 50 // Pixels to scroll before animation triggers
+
+if (headerBackground) {
+  const updateHeaderBackground = () => {
+    const scrollY = window.scrollY
+    
+    if (scrollY > scrollThreshold) {
+      // Scrolled down - apply darker background
+      headerBackground.className = 'bg-gradient-to-b from-gray-900/95 via-gray-800/90 to-gray-900/85 backdrop-blur-lg shadow-xl border-b border-gray-700/30 transition-all duration-500 ease-in-out'
+    } else {
+      // At top - transparent background to show hero image
+      headerBackground.className = 'bg-gradient-to-b from-black/70 via-black/50 to-transparent backdrop-blur-sm transition-all duration-500 ease-in-out'
+    }
+  }
+
+  // Listen for scroll events with throttling for performance
+  let ticking = false
+  const handleScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateHeaderBackground()
+        ticking = false
+      })
+      ticking = true
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll)
+  
+  // Initial check in case page loads scrolled
+  updateHeaderBackground()
+}
+
 // Mobile menu toggle functionality
 const mobileMenuButton = document.querySelector('#mobile-menu-button')
 const mobileMenu = document.querySelector('#mobile-menu')
