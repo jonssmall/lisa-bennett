@@ -57,10 +57,10 @@ if (desktopHeaderBg) {
 const learnAboutButton = document.querySelector('#learn-about-button')
 if (learnAboutButton) {
   learnAboutButton.addEventListener('click', () => {
-    const platformSection = document.querySelector('#platform-section')
-    if (platformSection) {
+    const aboutSection = document.querySelector('#about-section')
+    if (aboutSection) {
       // CSS scroll-margin-top handles the header offset automatically
-      platformSection.scrollIntoView({ 
+      aboutSection.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'
       })
@@ -74,20 +74,20 @@ const mobileAboutButton = document.querySelector('#mobile-about-button')
 const footerAboutButton = document.querySelector('#footer-about-button')
 
 function handleAboutAnthonyClick() {
-  const platformSection = document.querySelector('#platform-section')
+  const aboutSection = document.querySelector('#about-section')
   
-  // Check if we're on the home page and the platform section exists
-  if (platformSection) {
+  // Check if we're on the home page and the about section exists
+  if (aboutSection) {
     // We're on the home page - smooth scroll to the section
     // CSS scroll-margin-top handles the header offset automatically
-    platformSection.scrollIntoView({ 
+    aboutSection.scrollIntoView({ 
       behavior: 'smooth',
       block: 'start'
     })
   } else {
     // We're on a different page - navigate to home page with anchor fragment
     // Use Vite's BASE_URL to ensure correct path regardless of deployment depth
-    window.location.href = `${import.meta.env.BASE_URL}#platform-section`
+    window.location.href = `${import.meta.env.BASE_URL}#about-section`
   }
 }
 
@@ -115,13 +115,13 @@ if (footerAboutButton) {
 // Handle anchor fragment navigation when page loads
 document.addEventListener('DOMContentLoaded', () => {
   // Check if there's a hash in the URL when the page loads
-  if (window.location.hash === '#platform-section') {
-    const platformSection = document.querySelector('#platform-section')
-    if (platformSection) {
+  if (window.location.hash === '#about-section') {
+    const aboutSection = document.querySelector('#about-section')
+    if (aboutSection) {
       // Small delay to ensure page is fully rendered
       setTimeout(() => {
         // CSS scroll-margin-top handles the header offset automatically
-        platformSection.scrollIntoView({ 
+        aboutSection.scrollIntoView({ 
           behavior: 'smooth',
           block: 'start'
         })
@@ -195,3 +195,95 @@ if (newsletterForm) {
     }, 1500)
   })
 }
+
+// Image Carousel functionality
+const initImageCarousel = () => {
+  const img1 = document.getElementById('carousel-img-1')
+  const img2 = document.getElementById('carousel-img-2')
+  const img3 = document.getElementById('carousel-img-3')
+  const indicator1 = document.getElementById('indicator-1')
+  const indicator2 = document.getElementById('indicator-2')
+  const indicator3 = document.getElementById('indicator-3')
+  
+  // Check if carousel elements exist (they might not be on every page)
+  if (!img1 || !img2 || !img3) return
+  
+  let currentImage = 1
+  const totalImages = 3
+  
+  const showImage = (imageNumber) => {
+    // Reset all images to hidden
+    img1.classList.remove('opacity-100')
+    img1.classList.add('opacity-0')
+    img2.classList.remove('opacity-100')
+    img2.classList.add('opacity-0')
+    img3.classList.remove('opacity-100')
+    img3.classList.add('opacity-0')
+    
+    // Reset all indicators
+    if (indicator1 && indicator2 && indicator3) {
+      indicator1.classList.remove('bg-opacity-70')
+      indicator1.classList.add('bg-opacity-30')
+      indicator2.classList.remove('bg-opacity-70')
+      indicator2.classList.add('bg-opacity-30')
+      indicator3.classList.remove('bg-opacity-70')
+      indicator3.classList.add('bg-opacity-30')
+    }
+    
+    // Show the current image and activate its indicator
+    if (imageNumber === 1) {
+      img1.classList.remove('opacity-0')
+      img1.classList.add('opacity-100')
+      if (indicator1) {
+        indicator1.classList.remove('bg-opacity-30')
+        indicator1.classList.add('bg-opacity-70')
+      }
+    } else if (imageNumber === 2) {
+      img2.classList.remove('opacity-0')
+      img2.classList.add('opacity-100')
+      if (indicator2) {
+        indicator2.classList.remove('bg-opacity-30')
+        indicator2.classList.add('bg-opacity-70')
+      }
+    } else if (imageNumber === 3) {
+      img3.classList.remove('opacity-0')
+      img3.classList.add('opacity-100')
+      if (indicator3) {
+        indicator3.classList.remove('bg-opacity-30')
+        indicator3.classList.add('bg-opacity-70')
+      }
+    }
+  }
+  
+  const nextImage = () => {
+    currentImage = currentImage === totalImages ? 1 : currentImage + 1
+    showImage(currentImage)
+  }
+  
+  // Auto-advance carousel every 4 seconds
+  let carouselInterval = setInterval(nextImage, 4000)
+  
+  // Function to start the carousel
+  const startCarousel = () => {
+    if (carouselInterval) clearInterval(carouselInterval)
+    carouselInterval = setInterval(nextImage, 4000)
+  }
+  
+  // Function to stop the carousel
+  const stopCarousel = () => {
+    if (carouselInterval) {
+      clearInterval(carouselInterval)
+      carouselInterval = null
+    }
+  }
+  
+  // Pause carousel on hover, resume on mouse leave
+  const carouselContainer = img1.parentElement
+  if (carouselContainer) {
+    carouselContainer.addEventListener('mouseenter', stopCarousel)
+    carouselContainer.addEventListener('mouseleave', startCarousel)
+  }
+}
+
+// Initialize carousel when DOM is ready
+document.addEventListener('DOMContentLoaded', initImageCarousel)

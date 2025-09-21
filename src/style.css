@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Scroll offset for sticky header - ensures anchored sections aren't hidden behind header */
-#platform-section {
+#about-section {
   scroll-margin-top: 4rem; /* Adjust based on your header height - roughly 96px */
 }
 
