@@ -41,7 +41,7 @@ export default defineConfig({
           // Campaign Details
           experience: '15+ years of community service',
           priorities: ['Public Safety', 'Economic Development', 'Infrastructure', 'Community Engagement'],
-          campaignEmail: 'info@colucciforward1.com',
+          campaignEmail: 'Antonycolucci732@gmail.com',
           campaignPhone: '(732) 503-9707',
           
           // Social Media
