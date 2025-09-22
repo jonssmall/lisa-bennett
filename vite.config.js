@@ -42,7 +42,7 @@ export default defineConfig({
           experience: '15+ years of community service',
           priorities: ['Public Safety', 'Economic Development', 'Infrastructure', 'Community Engagement'],
           campaignEmail: 'info@colucciforward1.com',
-          campaignPhone: '(555) 123-WARD',
+          campaignPhone: '(732) 503-9707',
           
           // Social Media
           facebook: 'ColucciForWard1',
@@ -72,7 +72,7 @@ export default defineConfig({
         return {
           ...baseContext,
           title: 'Anthony Colucci for Toms River Ward 1 Council - Leadership You Can Trust',
-          description: 'Vote Anthony Colucci for Toms River Ward 1 Council. Experienced leadership, proven results. Election Day: November 5, 2025.',
+          description: 'Vote Anthony Colucci for Toms River Ward 1 Council. Experienced leadership, proven results.',
           canonical_path: ''
         };
       },
