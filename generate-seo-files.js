@@ -3,7 +3,7 @@ import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 
 // Get the site URL from environment or use default from package.json
-const siteUrl = process.env.SITE_URL || process.env.npm_package_homepage || 'https://jonssmall.github.io/campaign/';
+const siteUrl = process.env.SITE_URL || process.env.npm_package_homepage || 'https://anthonycolucciward1council.com/';
 
 // Generate sitemap.xml
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
