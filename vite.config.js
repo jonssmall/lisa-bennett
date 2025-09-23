@@ -12,7 +12,7 @@ const handlebarsHelpers = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/campaign/',
+  base: '/',
   assetsInclude: ['**/*.xml', '**/*.txt'],
   plugins: [
     handlebars({
