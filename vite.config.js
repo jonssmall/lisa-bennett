@@ -35,7 +35,7 @@ export default defineConfig({
           environment: 'development',
           
           // SEO Variables
-          siteUrl: 'https://jonssmall.github.io/campaign/',
+          // siteUrl: 'https://jonssmall.github.io/campaign/',
           canonical_path: '',
           
           // Campaign Details
