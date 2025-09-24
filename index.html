@@ -4,7 +4,7 @@
     {{> head}}
     <title>{{title}}</title>
 
-    <!-- Structured Data for Political Candidate -->
+    <!-- Structured Data for Political Candidate Homepage -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -12,17 +12,28 @@
       "name": "{{candidateName}}",
       "jobTitle": "Candidate for {{office}}",
       "description": "{{description}}",
-      "url": "{{siteUrl}}",
-      "image": "{{siteUrl}}images/social-headshot.jpg",
+      "url": "https://anthonycolucciward1council.com/",
+      "image": "https://anthonycolucciward1council.com/images/social-headshot.jpg",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://anthonycolucciward1council.com/"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Toms River",
         "addressRegion": "NJ",
+        "postalCode": "08753",
         "addressCountry": "US"
       },
       "affiliation": {
         "@type": "Organization",
-        "name": "Colucci for Council Committee"
+        "name": "Colucci for Council Committee",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Toms River",
+          "addressRegion": "NJ",
+          "addressCountry": "US"
+        }
       },
       "knowsAbout": [
         "Public Safety",
@@ -30,7 +41,12 @@
         "Infrastructure",
         "Community Engagement",
         "Local Government",
-        "Municipal Services"
+        "Municipal Services",
+        "Property Tax Relief",
+        "Storm Recovery",
+        "Coastal Resilience",
+        "Government Transparency",
+        "Zoning and Development"
       ],
       "memberOf": {
         "@type": "PoliticalParty",
@@ -38,6 +54,92 @@
       },
       "alumniOf": "Community Leadership Experience",
       "award": "15+ years of community service",
+      "workLocation": {
+        "@type": "Place",
+        "name": "Toms River Ward 1",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Toms River",
+          "addressRegion": "NJ",
+          "addressCountry": "US"
+        }
+      },
+      "seeks": {
+        "@type": "Role",
+        "roleName": "Council Member",
+        "namedPosition": "Ward 1 Council",
+        "description": "Seeking election to Toms River Ward 1 Council to provide experienced leadership and community-focused solutions"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "{{campaignPhone}}",
+        "email": "{{campaignEmail}}",
+        "contactType": "Campaign Headquarters",
+        "areaServed": "Toms River Ward 1, NJ"
+      },
+      "sameAs": [
+        "https://www.facebook.com/{{facebook}}",
+        "https://twitter.com/{{twitter}}",
+        "https://www.instagram.com/{{instagram}}"
+      ],
+      "potentialAction": [
+        {
+          "@type": "DonateAction",
+          "name": "Donate to Campaign",
+          "url": "https://politics.raisethemoney.com/en/acolucci/"
+        },
+        {
+          "@type": "JoinAction",
+          "name": "Join Campaign",
+          "url": "https://forms.gle/TxC79mS6ua4sQQG77"
+        },
+        {
+          "@type": "RegisterAction",
+          "name": "Register to Vote",
+          "url": "https://voter.svrs.nj.gov/register"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Website Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Anthony Colucci for Ward 1",
+      "alternateName": "Colucci for Council",
+      "url": "https://anthonycolucciward1council.com/",
+      "description": "Official campaign website for Anthony Colucci, candidate for Toms River Ward 1 Council",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Colucci for Council Committee"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://anthonycolucciward1council.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Organization/Campaign Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Colucci for Council Committee",
+      "alternateName": "Anthony Colucci Campaign",
+      "url": "https://anthonycolucciward1council.com/",
+      "logo": "https://anthonycolucciward1council.com/images/logo-cropped.png",
+      "description": "Campaign organization supporting Anthony Colucci for Toms River Ward 1 Council",
+      "foundingDate": "2025",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toms River",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "{{campaignPhone}}",
@@ -48,7 +150,11 @@
         "https://www.facebook.com/{{facebook}}",
         "https://twitter.com/{{twitter}}",
         "https://www.instagram.com/{{instagram}}"
-      ]
+      ],
+      "member": {
+        "@type": "Person",
+        "name": "{{candidateName}}"
+      }
     }
     </script>
   </head>

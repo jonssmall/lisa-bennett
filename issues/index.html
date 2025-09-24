@@ -4,6 +4,179 @@
 <head>
     {{> head}}
     <title>{{title}}</title>
+
+    <!-- Structured Data for Issues/Platform Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "{{title}}",
+      "url": "https://anthonycolucciward1council.com/issues/",
+      "description": "{{description}}",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Anthony Colucci for Ward 1",
+        "url": "https://anthonycolucciward1council.com/"
+      },
+      "mainEntity": {
+        "@type": "Person",
+        "name": "{{candidateName}}",
+        "jobTitle": "Candidate for {{office}}",
+        "image": "https://anthonycolucciward1council.com/images/social-headshot.jpg",
+        "url": "https://anthonycolucciward1council.com/"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://anthonycolucciward1council.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Issues & Platform",
+            "item": "https://anthonycolucciward1council.com/issues/"
+          }
+        ]
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Property Tax Relief",
+          "description": "Keeping costs down and working for tax relief using decades of finance experience"
+        },
+        {
+          "@type": "Thing",
+          "name": "Storm Recovery & Coastal Resilience",
+          "description": "Comprehensive storm recovery programs and forward-thinking resilience infrastructure"
+        },
+        {
+          "@type": "Thing",
+          "name": "Government Transparency",
+          "description": "Making local government meetings more accessible and responsive to citizens"
+        },
+        {
+          "@type": "Thing",
+          "name": "Development Control",
+          "description": "Checking overdevelopment to maintain community character and small-town feel"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Colucci for Council Committee"
+      }
+    }
+    </script>
+
+    <!-- Political Platform Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PoliticalParty",
+      "name": "Anthony Colucci Platform for Ward 1",
+      "description": "Comprehensive platform addressing key issues facing Toms River Ward 1",
+      "url": "https://anthonycolucciward1council.com/issues/",
+      "member": {
+        "@type": "Person",
+        "name": "{{candidateName}}"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toms River",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
+      "knowsAbout": [
+        {
+          "@type": "Thing",
+          "name": "Property Tax Relief",
+          "description": "Using finance experience to keep costs down and secure tax relief for residents"
+        },
+        {
+          "@type": "Thing", 
+          "name": "Storm Recovery & Coastal Resilience",
+          "description": "Enhanced flood protection, disaster relief funding, and climate-adaptive building codes"
+        },
+        {
+          "@type": "Thing",
+          "name": "Government Transparency",
+          "description": "Moving council meetings back to 7pm, responsive OPRA requests, and following Sunshine Law"
+        },
+        {
+          "@type": "Thing",
+          "name": "Development Control",
+          "description": "Sticking to Master Plan, judicious variance allocation, and stopping four-story+ buildings"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Political Candidate with Platform Focus -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{candidateName}}",
+      "jobTitle": "Candidate for {{office}}",
+      "description": "Experienced candidate with comprehensive platform for Ward 1 improvements",
+      "url": "https://anthonycolucciward1council.com/",
+      "image": "https://anthonycolucciward1council.com/images/social-headshot.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toms River",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Colucci for Council Committee"
+      },
+      "knowsAbout": [
+        "Property Tax Policy",
+        "Municipal Finance",
+        "Storm Recovery Planning",
+        "Coastal Resilience",
+        "Government Transparency",
+        "Zoning and Development",
+        "Community Planning",
+        "Local Government Operations"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Finance Professional",
+        "description": "Over 40 years in finance",
+        "skills": ["Financial Management", "Budget Analysis", "Cost Control"]
+      },
+      "seeks": {
+        "@type": "Role",
+        "roleName": "Council Member",
+        "namedPosition": "Ward 1 Council",
+        "description": "Seeking to implement comprehensive platform for Ward 1 improvements"
+      },
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "Zoning Board of Adjustment",
+          "description": "Experience addressing overdevelopment concerns"
+        }
+      ],
+      "award": "15+ years of community service",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "{{campaignPhone}}",
+        "email": "{{campaignEmail}}",
+        "contactType": "Campaign Headquarters"
+      },
+      "sameAs": [
+        "https://www.facebook.com/{{facebook}}",
+        "https://twitter.com/{{twitter}}",
+        "https://www.instagram.com/{{instagram}}"
+      ]
+    }
+    </script>
 </head>
 
 <body>
