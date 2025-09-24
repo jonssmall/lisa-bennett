@@ -3,7 +3,7 @@
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://anthonycolucciward1council.com/",
+  "homepage": "https://lisabennettforassembly.com/",
   "scripts": {
     "dev": "vite",
     "build": "node generate-seo-files.js && vite build",

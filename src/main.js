@@ -53,7 +53,7 @@ if (desktopHeaderBg) {
   updateDesktopHeader()
 }
 
-// Learn About Anthony smooth scroll functionality
+// Learn About Lisa smooth scroll functionality
 const learnAboutButton = document.querySelector('#learn-about-button')
 if (learnAboutButton) {
   learnAboutButton.addEventListener('click', () => {
@@ -68,12 +68,12 @@ if (learnAboutButton) {
   })
 }
 
-// Header "About Anthony" buttons smooth scroll functionality
+// Header "About Lisa" buttons smooth scroll functionality
 const desktopAboutButton = document.querySelector('#desktop-about-button')
 const mobileAboutButton = document.querySelector('#mobile-about-button')
 const footerAboutButton = document.querySelector('#footer-about-button')
 
-function handleAboutAnthonyClick() {
+function handleAboutLisaClick() {
   const aboutSection = document.querySelector('#about-section')
   
   // Check if we're on the home page and the about section exists
@@ -92,7 +92,7 @@ function handleAboutAnthonyClick() {
 }
 
 if (desktopAboutButton) {
-  desktopAboutButton.addEventListener('click', handleAboutAnthonyClick)
+  desktopAboutButton.addEventListener('click', handleAboutLisaClick)
 }
 
 if (mobileAboutButton) {
@@ -104,12 +104,12 @@ if (mobileAboutButton) {
     }
     
     // Then handle the navigation/scrolling
-    handleAboutAnthonyClick()
+    handleAboutLisaClick()
   })
 }
 
 if (footerAboutButton) {
-  footerAboutButton.addEventListener('click', handleAboutAnthonyClick)
+  footerAboutButton.addEventListener('click', handleAboutLisaClick)
 }
 
 // Handle anchor fragment navigation when page loads
