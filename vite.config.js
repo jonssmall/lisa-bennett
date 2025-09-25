@@ -41,8 +41,7 @@ export default defineConfig({
           // Campaign Details
           experience: '20+ years of public service',
           priorities: ['Healthcare Access', 'Education Funding', 'Environmental Protection', 'Economic Development'],
-          campaignEmail: 'info@lisabennettforassembly.com',
-          campaignPhone: '(732) 555-0123',
+          campaignEmail: 'lisabennettforassembly@gmail.com',
           
           // Social Media
           facebook: 'BennettForAssembly',
