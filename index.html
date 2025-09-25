@@ -11,8 +11,78 @@
   {{> header}}
 
   <main>
-    <!-- Hero Section with Two Columns - extends behind header -->
-    <section class="min-h-screen flex -mt-20 md:-mt-16 ">
+    <!-- Mobile/Tablet Hero Section - shows on mobile and tablet only -->
+    <section class="bg-blue-900 lg:hidden -mt-20 md:-mt-16 py-6">
+      <div class="px-4 sm:px-6 pt-24 pb-8">
+        <!-- 2x2 Grid Layout -->
+        <div class="grid grid-cols-2 gap-4">
+          
+          <!-- Top Left: Hero Text Content -->
+          <div>
+            <h1 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-tight">
+              {{candidateName}}
+            </h1>
+            <h2 class="text-base sm:text-lg font-semibold text-blue-200 mb-2">
+              for {{office}}
+            </h2>
+            <p class="text-xs sm:text-sm text-white mb-2 leading-relaxed">
+              {{slogan}}
+            </p>
+            <p class="text-xs text-blue-100 leading-relaxed">
+              Bringing progressive leadership and effective solutions to Ocean County.
+            </p>
+          </div>
+          
+          <!-- Top Right: Placeholder for Image -->
+          <div class="bg-blue-700 rounded-lg flex items-center justify-center min-h-[120px] overflow-hidden relative">
+            <img src="/images/jacket.JPG" class="w-full h-[150px] sm:h-[190px] md:h-[230px] object-cover object-top" />
+          </div>
+          
+          <!-- Bottom Left: Stacked CTA Buttons -->
+          <div class="space-y-2">
+            <!-- Primary Action - Donate Now -->
+            <a href="https://politics.raisethemoney.com/en/lbennettQz0cN3QQlvIxF2wDZpH3yA"
+              class="w-full bg-white text-blue-800 hover:bg-blue-50 font-bold py-2 px-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center justify-center min-h-[44px] text-xs sm:text-sm">
+              Donate Now
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+            
+            <!-- View Platform -->
+            <a href="issues/"
+              class="w-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-800 font-bold py-2 px-3 rounded-lg transition-all duration-300 min-h-[44px] flex items-center justify-center text-xs sm:text-sm">
+              View Platform
+            </a>
+            
+            <!-- Volunteer -->
+            <a href="https://forms.gle/fsD1gwH5ULkb575S6" target="_blank" rel="noopener noreferrer"
+              class="w-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-800 font-bold py-2 px-3 rounded-lg transition-all duration-300 inline-flex items-center justify-center min-h-[44px] text-xs sm:text-sm">
+              Volunteer
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+            
+            <!-- Meet Lisa -->
+            <button id="meet-lisa-button-mobile" type="button"
+              class="w-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-800 font-bold py-2 px-3 rounded-lg transition-all duration-300 min-h-[44px] flex items-center justify-center text-xs sm:text-sm">
+              Meet Lisa
+            </button>
+          </div>
+          
+          <!-- Bottom Right: Legislative District Badge -->
+          <div class="flex items-center justify-center">
+            <img src="/images/cropped-ld9.png" alt="Legislative District 9" class="w-[8rem] h-auto" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desktop Hero Section - shows on large screens only -->
+    <section class="min-h-screen hidden lg:flex -mt-20 md:-mt-16 ">
       <!-- Left Column - Dark Green Background with Text - Made wider for better proportions -->
       <div class="w-full lg:w-3/5 bg-green-800 flex items-center justify-center relative">
         <div class="max-w-4xl px-8 sm:px-12 lg:px-16 pt-[6rem]">
@@ -30,7 +100,7 @@
                 {{slogan}}
               </p>
               <p class="text-base sm:text-lg text-green-100 mb-8 leading-relaxed">
-                {{experience}} bringing progressive leadership and effective solutions to Ocean County.
+                Bringing progressive leadership and effective solutions to Ocean County.
               </p>
             </div>
 

@@ -114,8 +114,14 @@ if (footerAboutButton) {
 
 // Hero "Meet Lisa" button smooth scroll functionality
 const meetLisaButton = document.querySelector('#meet-lisa-button')
+const meetLisaButtonMobile = document.querySelector('#meet-lisa-button-mobile')
+
 if (meetLisaButton) {
   meetLisaButton.addEventListener('click', handleAboutLisaClick)
+}
+
+if (meetLisaButtonMobile) {
+  meetLisaButtonMobile.addEventListener('click', handleAboutLisaClick)
 }
 
 // Handle anchor fragment navigation when page loads
