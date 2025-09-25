@@ -22,8 +22,8 @@ export default defineConfig({
         const baseContext = {
           // Campaign Information
           candidateName: 'Lisa Bennett',
-          office: 'New Jersey Assembly Legislative District 9',
-          slogan: 'Working Together for Ocean County',
+          office: 'Assembly - LD9',
+          slogan: 'A New Direction for Ocean County',
           electionDate: 'November 5, 2025',
           
           // Site Information
