@@ -83,8 +83,8 @@
 
     <!-- Desktop Hero Section - shows on large screens only -->
     <section class="min-h-screen hidden lg:flex -mt-20 md:-mt-16 ">
-      <!-- Left Column - Dark Green Background with Text - Made wider for better proportions -->
-      <div class="w-full lg:w-3/5 bg-green-800 flex items-center justify-center relative">
+      <!-- Left Column - Dark Blue Background with Text - Made wider for better proportions -->
+      <div class="w-full lg:w-3/5 bg-blue-800 flex items-center justify-center relative">
         <div class="max-w-4xl px-8 sm:px-12 lg:px-16 pt-[6rem]">
           <!-- Text and Image Side by Side -->
           <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
@@ -93,13 +93,13 @@
               <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 {{candidateName}}
               </h1>
-              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-green-200 mb-6">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-blue-200 mb-6">
                 for {{office}}
               </h2>
               <p class="text-lg sm:text-xl text-white mb-8 leading-relaxed">
                 {{slogan}}
               </p>
-              <p class="text-base sm:text-lg text-green-100 mb-8 leading-relaxed">
+              <p class="text-base sm:text-lg text-blue-100 mb-8 leading-relaxed">
                 Bringing progressive leadership and effective solutions to Ocean County.
               </p>
             </div>
@@ -114,7 +114,7 @@
           <!-- Call-to-Action Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <a href="https://politics.raisethemoney.com/en/lbennettQz0cN3QQlvIxF2wDZpH3yA"
-              class="bg-white text-green-800 hover:bg-green-50 font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center justify-center">
+              class="bg-white text-blue-800 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center justify-center">
               Donate Now
               <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
@@ -123,7 +123,7 @@
               </svg>
             </a>
             <a href="issues/"
-              class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-800 font-bold py-3 px-8 rounded-lg transition-all duration-300">
+              class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-800 font-bold py-3 px-8 rounded-lg transition-all duration-300">
               View Platform
             </a>
           </div>
@@ -131,7 +131,7 @@
           <!-- Additional Call-to-Action Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-6">
             <a href="https://forms.gle/fsD1gwH5ULkb575S6" target="_blank" rel="noopener noreferrer"
-              class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-800 font-bold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
+              class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-800 font-bold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
               Volunteer
               <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
@@ -140,7 +140,7 @@
               </svg>
             </a>
             <button id="meet-lisa-button" type="button"
-              class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-800 font-bold py-3 px-8 rounded-lg transition-all duration-300">
+              class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-800 font-bold py-3 px-8 rounded-lg transition-all duration-300">
               Meet Lisa
             </button>
           </div>
@@ -148,14 +148,14 @@
 
         <!-- Gradient overlay extending to the right -->
         <div
-          class="absolute top-0 right-0 w-32 h-full bg-gradient-to-r from-transparent to-green-800 pointer-events-none hidden lg:block">
+          class="absolute top-0 right-0 w-32 h-full bg-gradient-to-r from-transparent to-blue-800 pointer-events-none hidden lg:block">
         </div>
       </div>
 
       <!-- Right Column - Image with Gradient Blend - Adjusted width to match new left column -->
       <div class="hidden lg:block w-2/5 relative">
         <!-- Gradient overlay on the left edge of the image -->
-        <div class="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-green-800 to-transparent z-10"></div>
+        <div class="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-blue-800 to-transparent z-10"></div>
         <img src="/images/jacket.JPG" alt="Lisa Bennett, candidate for New Jersey Assembly Legislative District 9"
           class="w-full h-full object-cover" />
       </div>
@@ -366,79 +366,127 @@
               </h2>
             </div>
 
-            <!-- Three Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <!-- Three Cards Grid - 2+1 Layout -->
+            <div class="space-y-6 lg:space-y-8">
+              
+              <!-- Top Row: Work Experience and Education (Side by Side) -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                
+                <!-- Work Experience Card -->
+                <div
+                  class="bg-white border-2 border-gray-300 rounded-xl p-6 sm:p-8 shadow-2xl transition-shadow duration-300">
+                  <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
+                    Work Experience
+                  </h3>
+                  <div class="text-gray-600 space-y-4">
+                    <p class="font-semibold">
+                      A lifetime serving as a paralegal has prepared me for serving people and fighting for your rights.
+                    </p>
+                    <div class="leading-relaxed">
+                      <p>
+                        <strong>Montgomery McCracken</strong>, Linwood, NJ
+                      </p>
+                      <p>
+                        <strong>Fox Rothschild</strong>, Atlantic City, NJ
+                      </p>
+                      <p>
+                        <strong>Levinson Axelrod</strong>, Forked River, NJ
+                      </p>
+                      <p>
+                        <strong>Galex, Wolf</strong>, North Brunswick, NJ
+                      </p>
+                      <p>
+                        <strong>Stark & Stark</strong>, Hamilton, NJ
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-              <!-- Work Experience Card -->
-              <div
-                class="bg-white border-2 border-gray-300 rounded-xl p-6 sm:p-8 shadow-2xl transition-shadow duration-300">
-                <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
-                  Work Experience
-                </h3>
-                <div class="text-gray-600 space-y-4">
-                  <p class="font-semibold">
-                    A lifetime serving as a paralegal has prepared me for serving people and fighting for your rights.
-                  </p>
-                  <div class="leading-relaxed">
-                    <p>
-                      <strong>Montgomery McCracken</strong>, Linwood, NJ
+                <!-- Education Card -->
+                <div
+                  class="bg-white border-2 border-gray-300 rounded-xl p-6 sm:p-8 shadow-2xl transition-shadow duration-300">
+                  <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
+                    Education
+                  </h3>
+                  <div class="text-gray-600 space-y-4">
+                    <p class="leading-relaxed">
+                      <strong>A.A.S. Brookdale Community College</strong><br>
+                      Paralegal Studies and Social Sciences
                     </p>
-                    <p>
-                      <strong>Fox Rothschild</strong>, Atlantic City, NJ
-                    </p>
-                    <p>
-                      <strong>Levinson Axelrod</strong>, Forked River, NJ
-                    </p>
-                    <p>
-                      <strong>Galex, Wolf</strong>, North Brunswick, NJ
-                    </p>
-                    <p>
-                      <strong>Stark & Stark</strong>, Hamilton, NJ
+                    <p class="leading-relaxed">
+                      Distinguished Scholar Award, Phi Theta Kappa, Psi Beta, Lexis-Nexis Award for Outstanding
+                      Achievement in Legal Studies.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <!-- Education Card -->
-              <div
-                class="bg-white border-2 border-gray-300 rounded-xl p-6 sm:p-8 shadow-2xl transition-shadow duration-300">
-                <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
-                  Education
-                </h3>
-                <div class="text-gray-600 space-y-4">
-                  <p class="leading-relaxed">
-                    <strong>A.A.S. Brookdale Community College</strong><br>
-                    Paralegal Studies and Social Sciences
-                  </p>
-                  <p class="leading-relaxed">
-                    Distinguished Scholar Award, Phi Theta Kappa, Psi Beta, Lexis-Nexis Award for Outstanding
-                    Achievement in Legal Studies.
-                  </p>
+              <!-- Bottom Row: Memberships & Affiliations (Full Width) -->
+              <div class="grid grid-cols-1">
+                <!-- Memberships & Affiliations Card -->
+                <div
+                  class="bg-white border-2 border-gray-300 rounded-xl p-6 sm:p-8 shadow-2xl transition-shadow duration-300">
+                  <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
+                    Memberships & Affiliations
+                  </h3>
+                  <div class="text-gray-600 space-y-2">
+                    <p class="leading-relaxed">
+                      <strong>Active Member:</strong>
+                    </p>
+                    <p class="leading-relaxed">
+                      Stafford Township Women's Club
+                    </p>
+                    <p class="leading-relaxed">
+                      Stafford Township Friends of the Library
+                    </p>
+                    <p class="leading-relaxed">
+                      NJ Democratic State Committee (NJDSC)
+                    </p>
+                    <p class="leading-relaxed">
+                      State Committee Representative for Ocean County
+                    </p>
+                    <p class="leading-relaxed">
+                      Ocean County Democratic Committee
+                    </p>
+                    <p class="leading-relaxed">
+                      Stafford Township Democratic Club
+                    </p>
+                    <p class="leading-relaxed">
+                      Great Bay Democratic Club
+                    </p>
+                    <p class="leading-relaxed">
+                      Manchester Township Democratic Club
+                    </p>
+                    <p class="leading-relaxed">
+                      Democratic Coalition of Ocean County
+                    </p>
+                    <p class="leading-relaxed">
+                      Ocean County Chapter, National Organization for Women
+                    </p>
+                    <p class="leading-relaxed">
+                      Ocean County Violence Prevention Project Coalition
+                    </p>
+                    <p class="leading-relaxed">
+                      Stafford Township Historical Society
+                    </p>
+                    <p class="leading-relaxed">
+                      Lector and Eucharistic Minister Member, St. Francis of Assisi Parish, Long Beach Township, NJ
+                    </p>
+                    <p class="leading-relaxed">
+                      Choir, St. Francis of Assisi Parish, Long Beach Township, NJ
+                    </p>
+                    <p class="leading-relaxed">
+                      <strong>Former:</strong>
+                    </p>
+                    <p class="leading-relaxed">
+                      HOA Board, Island Gate Homeowner's Association, Stafford Township
+                    </p>
+                    <p class="leading-relaxed">
+                      Co-Founder, The Helmetta Historical Society, Helmetta, NJ
+                    </p>
+                  </div>
                 </div>
               </div>
-
-              <!-- Memberships & Affiliations Card -->
-              <div
-                class="bg-white border-2 border-gray-300 rounded-xl p-6 sm:p-8 shadow-2xl transition-shadow duration-300 md:col-span-2 lg:col-span-1">
-                <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
-                  Memberships & Affiliations
-                </h3>
-                <div class="text-gray-600 space-y-4">
-                  <p class="leading-relaxed">
-                    <strong>Active Member:</strong> Stafford Township Women's Club; Stafford Township Friends of the
-                    Library; Stafford Township Democratic Club; Great Bay Democratic Club; Manchester Democratic Club;
-                    Democratic Coalition of Ocean County; Ocean County Chapter, National Organization for Women; Ocean
-                    County Violence Prevention Project Coalition; Stafford Township Historical Society; Lector and
-                    Eucharistic Minister Member, St. Francis of Assisi Parish, Long Beach Township, NJ; Choir, St.
-                    Francis of Assisi Parish, Long Beach Township, NJ.
-                  </p>
-                  <p class="leading-relaxed">
-                    <strong>Former:</strong> HOA Board, Island Gate Homeowner's Association, Stafford Township;
-                    Co-Founder, The Helmetta Historical Society, Helmetta, NJ.
-                  </p>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
