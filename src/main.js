@@ -112,6 +112,12 @@ if (footerAboutButton) {
   footerAboutButton.addEventListener('click', handleAboutLisaClick)
 }
 
+// Hero "Meet Lisa" button smooth scroll functionality
+const meetLisaButton = document.querySelector('#meet-lisa-button')
+if (meetLisaButton) {
+  meetLisaButton.addEventListener('click', handleAboutLisaClick)
+}
+
 // Handle anchor fragment navigation when page loads
 document.addEventListener('DOMContentLoaded', () => {
   // Check if there's a hash in the URL when the page loads
