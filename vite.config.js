@@ -67,6 +67,15 @@ export default defineConfig({
           };
         }
 
+        if (pagePath.includes('district/index.html')) {
+          return {
+            ...baseContext,
+            title: 'Legislative District 9 - Lisa Bennett for Assembly',
+            description: 'Learn about New Jersey Legislative District 9, the communities we serve, and the key issues facing Ocean County residents.',
+            canonical_path: 'district/'
+          };
+        }
+
         // Default context for homepage
         return {
           ...baseContext,
@@ -91,6 +100,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         endorsements: resolve(__dirname, 'endorsements/index.html'),
         issues: resolve(__dirname, 'issues/index.html'),
+        district: resolve(__dirname, 'district/index.html'),
       }
     }
   }
