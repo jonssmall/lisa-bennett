@@ -24,7 +24,7 @@ export default defineConfig({
           candidateName: 'Lisa Bennett',
           office: 'Assembly - LD9',
           slogan: 'A New Direction for Ocean County',
-          electionDate: 'November 5, 2025',
+          electionDate: 'November 4, 2025',
           
           // Site Information
           title: 'Lisa Bennett for Assembly District 9',
