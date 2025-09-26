@@ -28,7 +28,7 @@ export default defineConfig({
           
           // Site Information
           title: 'Lisa Bennett for Assembly District 9',
-          description: 'Experienced leadership and progressive solutions for Ocean County. Vote Lisa Bennett for Assembly - Working Together for Ocean County.',
+          description: 'Experienced leadership and innovative solutions for Ocean County. Vote Lisa Bennett for Assembly - Working Together for Ocean County.',
           author: 'Bennett Campaign Team',
           year: new Date().getFullYear(),
           version: '1.0.0',
@@ -53,7 +53,7 @@ export default defineConfig({
           return {
             ...baseContext,
             title: 'Issues & Platform - Lisa Bennett for Assembly District 9',
-            description: 'Lisa Bennett\'s platform for Assembly District 9: Healthcare Access, Education Funding, Environmental Protection, and Economic Development. Progressive solutions for Ocean County.',
+            description: 'Lisa Bennett\'s platform for Assembly District 9: Healthcare Access, Education Funding, Environmental Protection, and Economic Development. Innovative solutions for Ocean County.',
             canonical_path: 'issues/'
           };
         }
@@ -80,7 +80,7 @@ export default defineConfig({
         return {
           ...baseContext,
           title: 'Lisa Bennett for New Jersey Assembly District 9 - Working Together for Ocean County',
-          description: 'Vote Lisa Bennett for New Jersey Assembly Legislative District 9. Experienced leadership, progressive solutions.',
+          description: 'Vote Lisa Bennett for New Jersey Assembly Legislative District 9. Experienced leadership, innovative solutions.',
           canonical_path: ''
         };
       },
