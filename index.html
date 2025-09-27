@@ -4,6 +4,81 @@
 <head>
   {{> head}}
   <title>{{title}}</title>
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lisa Bennett",
+    "jobTitle": "Candidate for New Jersey General Assembly",
+    "description": "Progressive candidate running for New Jersey Assembly District 9, representing Ocean County communities with a focus on education, healthcare, and economic development.",
+    "url": "https://www.lisabennettforassembly.com",
+    "image": "https://www.lisabennettforassembly.com/images/social-headshot.jpg",
+    "sameAs": [
+      "https://twitter.com/BennettLD9"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ocean County",
+      "addressRegion": "NJ",
+      "addressCountry": "US"
+    },
+    "memberOf": {
+      "@type": "PoliticalParty",
+      "name": "Democratic Party"
+    },
+    "seeks": {
+      "@type": "Role",
+      "roleName": "New Jersey Assembly Member",
+      "description": "Assembly District 9"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Lisa Bennett for Assembly",
+    "url": "https://www.lisabennettforassembly.com",
+    "description": "Official campaign website for Lisa Bennett, candidate for New Jersey Assembly District 9",
+    "inLanguage": "en-US",
+    "publisher": {
+      "@type": "Person",
+      "name": "Lisa Bennett"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.lisabennettforassembly.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Lisa Bennett for Assembly Campaign",
+    "url": "https://www.lisabennettforassembly.com",
+    "logo": "https://www.lisabennettforassembly.com/images/brand-logo.png",
+    "description": "Campaign organization supporting Lisa Bennett's candidacy for New Jersey Assembly District 9",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ocean County",
+      "addressRegion": "NJ",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://twitter.com/BennettLD9"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Lisa Bennett"
+    }
+  }
+  </script>
 </head>
 
 <body>

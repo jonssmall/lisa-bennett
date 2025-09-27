@@ -4,6 +4,82 @@
 <head>
   {{> head}}
   <title>{{title}}</title>
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Policy Platform - Lisa Bennett for Assembly",
+    "url": "https://www.lisabennettforassembly.com/issues/",
+    "description": "Lisa Bennett's comprehensive policy platform for Ocean County and Legislative District 9, covering education, healthcare, economic development, and environmental protection.",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Lisa Bennett for Assembly",
+      "url": "https://www.lisabennettforassembly.com"
+    },
+    "about": {
+      "@type": "Person",
+      "name": "Lisa Bennett",
+      "jobTitle": "Candidate for New Jersey General Assembly"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Policy Issues",
+      "description": "Key policy positions and platform issues",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Education",
+          "description": "Improving public education funding and resources"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Healthcare",
+          "description": "Expanding healthcare access and affordability"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Economic Development",
+          "description": "Supporting local businesses and job creation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Environmental Protection",
+          "description": "Protecting Ocean County's natural resources"
+        }
+      ]
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lisa Bennett",
+    "jobTitle": "Candidate for New Jersey General Assembly",
+    "url": "https://www.lisabennettforassembly.com",
+    "seeks": {
+      "@type": "Role",
+      "roleName": "New Jersey Assembly Member",
+      "description": "Assembly District 9"
+    },
+    "knowsAbout": [
+      "Education Policy",
+      "Healthcare Access",
+      "Economic Development",
+      "Environmental Protection",
+      "Local Government",
+      "Ocean County Issues"
+    ]
+  }
+  </script>
 </head>
 
 <body>

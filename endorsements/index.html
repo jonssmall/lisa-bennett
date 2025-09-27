@@ -4,6 +4,73 @@
 <head>
   {{> head}}
   <title>{{title}}</title>
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Endorsements - Lisa Bennett for Assembly",
+    "url": "https://www.lisabennettforassembly.com/endorsements/",
+    "description": "Organizations, leaders, and community groups endorsing Lisa Bennett for New Jersey Assembly District 9.",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Lisa Bennett for Assembly",
+      "url": "https://www.lisabennettforassembly.com"
+    },
+    "about": {
+      "@type": "Person",
+      "name": "Lisa Bennett",
+      "jobTitle": "Candidate for New Jersey General Assembly"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Campaign Endorsements",
+      "description": "Organizations and leaders supporting Lisa Bennett's candidacy",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Democratic Organizations",
+          "description": "Support from Democratic Party organizations"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Community Leaders",
+          "description": "Endorsements from local community leaders"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Professional Organizations",
+          "description": "Support from professional and advocacy groups"
+        }
+      ]
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lisa Bennett",
+    "jobTitle": "Candidate for New Jersey General Assembly",
+    "url": "https://www.lisabennettforassembly.com",
+    "seeks": {
+      "@type": "Role",
+      "roleName": "New Jersey Assembly Member",
+      "description": "Assembly District 9"
+    },
+    "award": [
+      "Democratic Party Endorsement",
+      "Community Leader Support",
+      "Professional Organization Endorsements"
+    ]
+  }
+  </script>
 </head>
 
 <body>
